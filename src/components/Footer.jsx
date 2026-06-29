@@ -12,7 +12,7 @@ function Footer() {
       <div className="container footer-container">
         {/* Left copyright notice */}
         <div className="footer-left">
-          &copy; 2026 Raghvendra Singh &middot; Built with React + Claude API
+          &copy; 2026 chronix aka Raghvendra Singh &middot; Built with React + Claude API
         </div>
 
         {/* Right social and top trigger links */}
@@ -27,7 +27,7 @@ function Footer() {
             <Github size={16} />
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin-username"
+            href="https://www.linkedin.com/in/raghvendra-singh-850399323"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-social-link"

@@ -5,23 +5,23 @@ function About() {
   const cards = [
     {
       icon: <Brain className="about-card-icon" size={24} />,
-      title: "AI-First Thinking",
-      desc: "I integrate AI into every project — not as a gimmick, but as the core."
+      title: "Learn",
+      desc: "Always exploring better tools, better systems, and better engineering.."
     },
     {
       icon: <Code2 className="about-card-icon" size={24} />,
-      title: "Clean Code",
-      desc: "Readable, maintainable, well-structured. I care about the craft."
+      title: "Build",
+      desc: "Turning ideas into production ready software."
     },
     {
       icon: <Layers className="about-card-icon" size={24} />,
-      title: "Full-Stack",
-      desc: "Comfortable across the entire stack — from UI pixels to API design."
+      title: "Lead",
+      desc: "Taking ownership when needed and supporting the team at every stage."
     },
     {
       icon: <Zap className="about-card-icon" size={24} />,
-      title: "Ship Fast",
-      desc: "Move quickly, deploy often, iterate on real feedback."
+      title: "Improve",
+      desc: "Iterating continuously through feedback, experimentation, and curiosity."
     }
   ];
 
@@ -39,23 +39,24 @@ function About() {
           {/* Left Text Column */}
           <div className="about-left reveal">
             <p className="about-text">
-              I'm Raghvendra Singh, a Computer Science student with a genuine obsession with building things.
-              I started with frontend, fell in love with AI, and now I ship full-stack products that combine both.
+              I'm Raghvendra Singh, a Computer Science undergraduate at IIIT Kota focused on building production ready full stack applications powered by AI. 
+              I enjoy designing scalable backend systems, building intuitive user experiences, and turning ideas into software that people can rely on.
             </p>
             <p className="about-text">
-              My current focus is <strong>AI Style Mirror</strong> — a Myntra-inspired virtual styling app with real
-              Claude Vision integration, canvas-based try-on, and a persistent user profile via Supabase.
-              It's what I learn on and what I'm most proud of.
+              Over the past 6 months I've built projects ranging from multi agent AI platforms to intelligent 
+              virtual styling applications, working with React, Node.js, Express, Docker, REST APIs, databases, and modern AI technologies.
+              I enjoy solving engineering problems that require both thoughtful system design and attention to detail.
             </p>
             <p className="about-text">
-              I care about shipping things that actually work — not just projects that look good in a demo.
+              I believe the best outcomes come from people who genuinely care about the work, the people they work with,
+              and doing things the right way. Whether I'm leading a team or contributing as a teammate, I value ownership, clear communication, and building software that everyone can be proud of.
             </p>
 
             {/* Tags Container */}
             <div className="about-tags">
-              <span className="tag">Jaipur, Rajasthan 🇮🇳</span>
+              <span className="tag">Ganganagar, Rajasthan 🇮🇳</span>
               <span className="tag">Open to Internships</span>
-              <span className="tag">CS Undergrad</span>
+              <span className="tag">Computer Science Undergrad</span>
             </div>
           </div>
 

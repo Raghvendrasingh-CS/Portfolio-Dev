@@ -1,38 +1,56 @@
 import React from 'react';
-import { GraduationCap, Briefcase, GitBranch } from 'lucide-react';
+import { GraduationCap, Briefcase, GitBranch, ExternalLink } from 'lucide-react';
 
 const experiences = [
   {
-    icon: 'education',
+    emoji: '🎓',
+    icon: GraduationCap,
     role: 'B.Tech in Computer Science',
     org: 'YOUR UNIVERSITY NAME',
     period: '2022 – Present',
-    description: 'Studying core CS fundamentals — Data Structures, Algorithms, Operating Systems, DBMS, and Networks — while building real AI-powered projects on the side.',
-    tags: ['DSA', 'OS', 'DBMS', 'Networks', 'C++']
+    type: 'Education',
+    description: 'Pursuing core Computer Science fundamentals including Data Structures & Algorithms, Operating Systems, Database Management Systems, Computer Networks, and Object Oriented Programming. Applying academic knowledge to build real-world AI-powered applications simultaneously.',
+    highlights: [
+      'Strong foundation in DSA — solved 100+ problems across platforms',
+      'Applied OS and DBMS concepts in real project (Supabase + PostgreSQL)',
+      'Consistent academic performance while shipping side projects'
+    ],
+    tags: ['DSA', 'OS', 'DBMS', 'Networks', 'OOP', 'C++', 'Java'],
+    link: null
   },
   {
-    icon: 'work',
-    role: 'Lead Developer',
-    org: 'AI Style Mirror — Self Initiated',
+    emoji: '🚀',
+    icon: Briefcase,
+    role: 'Lead Developer — AI Style Mirror',
+    org: 'Self Initiated Project',
     period: '2025 – Present',
-    description: 'Designed and built an AI fashion styling app end-to-end. Integrated Claude Vision for body analysis, Supabase for persistent profiles, and Canvas API for virtual try-on. Deployed on Vercel.',
-    tags: ['Claude API', 'Supabase', 'Canvas API', 'Vite', 'Vercel']
+    type: 'Project Lead',
+    description: 'Designed, built, and deployed an end-to-end AI fashion styling web application. Integrated Claude Vision API for real-time body analysis, built a Canvas-based virtual try-on feature from scratch, implemented weather-aware outfit generation using OpenWeather API, and set up a persistent user profile system using Supabase and PostgreSQL.',
+    highlights: [
+      'Integrated Claude Vision for body shape analysis and style recommendations',
+      'Built Canvas API virtual try-on — no library, custom pixel manipulation',
+      'Shipped 10 features including PWA, offline mode, and ML feedback loop'
+    ],
+    tags: ['Claude API', 'Supabase', 'Canvas API', 'Vite', 'Vanilla JS', 'Vercel'],
+    link: 'https://github.com/Raghvendrasingh-CS'
   },
   {
-    icon: 'code',
+    emoji: '💻',
+    icon: GitBranch,
     role: 'Open Source Contributor',
     org: 'GitHub — Raghvendrasingh-CS',
     period: '2024 – Present',
-    description: 'Maintaining public repositories, contributing to open source, and documenting projects to professional standards for portfolio visibility and collaboration.',
-    tags: ['Git', 'GitHub', 'Open Source', 'Documentation']
+    type: 'Open Source',
+    description: 'Actively maintaining public repositories and contributing to the open source ecosystem. Writing professional documentation, maintaining clean commit history, and building projects that others can learn from and build on top of.',
+    highlights: [
+      'Public repos with proper README, setup guides, and architecture notes',
+      'Clean commit history and branch management practices',
+      'Projects used as reference by peers and fellow CS students'
+    ],
+    tags: ['Git', 'GitHub', 'Documentation', 'Open Source', 'Markdown'],
+    link: 'https://github.com/Raghvendrasingh-CS'
   }
 ];
-
-const iconMap = {
-  education: GraduationCap,
-  work: Briefcase,
-  code: GitBranch
-};
 
 function Projects() {
   return (
@@ -43,33 +61,50 @@ function Projects() {
           <h2 className="section-title">Experience</h2>
         </div>
 
-        <div className="timeline-container">
-          <div className="timeline-line" />
-          <div className="timeline-list">
-            {experiences.map((exp, idx) => {
-              const Icon = iconMap[exp.icon];
-              return (
-                <div className="timeline-item reveal" key={idx}>
-                  <div className="timeline-dot-wrapper">
-                    <div className="timeline-dot">
-                      <Icon size={14} />
+        <div className="exp-cards-list">
+          {experiences.map((exp, idx) => {
+            const Icon = exp.icon;
+            return (
+              <div className="exp-card reveal" key={idx}>
+                <div className="exp-card-left">
+                  <div className="exp-emoji">{exp.emoji}</div>
+                  <div className="exp-period-badge">{exp.period}</div>
+                  <div className="exp-type-label">{exp.type}</div>
+                </div>
+
+                <div className="exp-card-right">
+                  <div className="exp-card-header">
+                    <div>
+                      <h3 className="exp-role">{exp.role}</h3>
+                      <p className="exp-org">{exp.org}</p>
                     </div>
+                    {exp.link && (
+                      <a href={exp.link} target="_blank" rel="noopener noreferrer" className="exp-link-btn">
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
                   </div>
-                  <div className="timeline-card">
-                    <span className="timeline-period-badge">{exp.period}</span>
-                    <h3 className="timeline-role">{exp.role}</h3>
-                    <p className="timeline-org">{exp.org}</p>
-                    <p className="timeline-desc">{exp.description}</p>
-                    <div className="timeline-tags">
-                      {exp.tags.map((tag, tIdx) => (
-                        <span className="tag" key={tIdx}>{tag}</span>
-                      ))}
-                    </div>
+
+                  <p className="exp-desc">{exp.description}</p>
+
+                  <ul className="exp-highlights">
+                    {exp.highlights.map((h, hIdx) => (
+                      <li key={hIdx} className="exp-highlight-item">
+                        <span className="exp-bullet">▸</span>
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="exp-tags">
+                    {exp.tags.map((tag, tIdx) => (
+                      <span className="tag" key={tIdx}>{tag}</span>
+                    ))}
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

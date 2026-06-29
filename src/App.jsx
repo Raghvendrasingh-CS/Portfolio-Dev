@@ -5,6 +5,7 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import TechStack from './components/TechStack';
+import WebPresence from './components/WebPresence';
 import AskMe from './components/AskMe';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -67,6 +68,7 @@ function App() {
         <Experience />
         <Projects />
         <TechStack />
+        <WebPresence />
         <AskMe />
         <Contact />
       </main>

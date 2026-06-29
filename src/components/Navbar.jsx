@@ -61,7 +61,9 @@ function Navbar() {
       <div className="container nav-container">
         {/* Logo */}
         <a href="#" className="nav-logo" onClick={handleLogoClick}>
-          rk.dev
+          <span className="logo-bracket">&lt;</span>
+          <span className="logo-name">chronix</span>
+          <span className="logo-bracket"> /&gt;</span>
         </a>
 
         {/* Desktop Menu */}
@@ -70,6 +72,7 @@ function Navbar() {
           <li><a href="#experience" className={`nav-link ${activeSection === 'experience' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'experience')}>Experience</a></li>
           <li><a href="#projects" className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'projects')}>Projects</a></li>
           <li><a href="#tech-stack" className={`nav-link ${activeSection === 'tech-stack' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'tech-stack')}>Tech Stack</a></li>
+          <li><a href="#web-presence" className={`nav-link ${activeSection === 'web-presence' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'web-presence')}>Network</a></li>
           <li><a href="#ask-me" className={`nav-link ${activeSection === 'ask-me' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'ask-me')}>Ask Me</a></li>
           <li><a href="#contact" className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'contact')}>Contact</a></li>
           <li>
@@ -92,6 +95,7 @@ function Navbar() {
           <li><a href="#experience" className={`mobile-nav-link ${activeSection === 'experience' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'experience')}>Experience</a></li>
           <li><a href="#projects" className={`mobile-nav-link ${activeSection === 'projects' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'projects')}>Projects</a></li>
           <li><a href="#tech-stack" className={`mobile-nav-link ${activeSection === 'tech-stack' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'tech-stack')}>Tech Stack</a></li>
+          <li><a href="#web-presence" className={`mobile-nav-link ${activeSection === 'web-presence' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'web-presence')}>Network</a></li>
           <li><a href="#ask-me" className={`mobile-nav-link ${activeSection === 'ask-me' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'ask-me')}>Ask Me</a></li>
           <li><a href="#contact" className={`mobile-nav-link ${activeSection === 'contact' ? 'active' : ''}`} onClick={(e) => handleLinkClick(e, 'contact')}>Contact</a></li>
           <li style={{ marginTop: '12px' }}>

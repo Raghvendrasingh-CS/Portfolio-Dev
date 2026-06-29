@@ -68,18 +68,18 @@ function Contact() {
       icon: <Linkedin size={20} />,
       label: "LINKEDIN",
       value: "Connect with me",
-      href: "https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+      href: "https://www.linkedin.com/in/raghvendra-singh-850399323"
     },
     {
       icon: <Mail size={20} />,
       label: "EMAIL",
-      value: "YOUR_REAL_EMAIL@gmail.com",
-      href: "mailto:YOUR_REAL_EMAIL@gmail.com"
+      value: "chronix6996@gmail.com",
+      href: "mailto:chronix6996@gmail.com"
     },
     {
       icon: <MapPin size={20} />,
       label: "LOCATION",
-      value: "Jaipur, Rajasthan 🇮🇳",
+      value: "Ganganagar, Rajasthan 🇮🇳",
       href: null
     }
   ];
